@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.productCard img {
+    width: 100px;
+}
+
+.icons {
+    justify-self: end !important;
+}
+
+
+.carousel-inner img {
+    height: 70vh;
+
+    object-fit: cover !important;
+}
+
+.videoc {
+    height: 70vh;
+
+    object-fit: cover !important;
+}
+
+.sh {
+    text-shadow: 2px 2px #000000;
+}
+
+.cur {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.im {
+
+    transition: 0.5s;
+}
+
+
+
+.im:hover {
+
+    transform: scale(1.2);
+}
+
+.buton-search {
+    background-color: #fd9247;
+    border: none;
+
+
+}
+
+.buton-cart {
+    background-color: #fd9247;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+
+}
+
+
+.img-prod {
+    object-fit: contain;
+    height: 230px;
+    width: 80%;
+    cursor: pointer;
+}
+
+.card {
+    height: 100% !important;
+    width: 100%;
+}
+
+.input-search {
+    height: 40px;
+}
+
+.aside {
+    height: fit-content;
+
+}
+
+.input-c {
+    width: 60%;
+}
+
+.buton-filter {
+    background-color: #fd9247;
+    border-radius: 5%;
+    font-weight: bold;
+}
+
+.footer-container{
+    position: relative;
+    float: left;
+    width: 100%;
+
+}
+
+.footer {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.footer-section {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 424.98px) {
+    .tl {
+
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+
+    .img-logo {
+        width: 120px;
+    }
+
+    .carousel-inner img {
+        height: 45vh;
+
+        object-fit: cover !important;
+    }
+
+    .videoc {
+
+        height: 45vh;
+
+
+
+        object-fit: cover !important;
+    }
+
+}
+
+.img-h {
+    position: relative;
+    height: 230px;
+}
+
+.img-h img {
+    
+    position: absolute;
+}
+
+.img-h .sec {
+     visibility: hidden; 
+    opacity: 0;
+    
+    /* position: absolute;  */
+    transition: all 3s ease;
+}
+
+.img-h:hover .pri {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.img-h:hover .sec {
+    opacity: 1;
+    visibility: visible;
+}

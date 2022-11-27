@@ -1,0 +1,18 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.productCard{
+border: 1px solid black;
+}
+.productCard img{
+    width: 100px;
+} */
+#logo_header{
+    width: 150px;
+}
+.img-fluid{
+    width: 800px;
+    height: 300px !important;
+}

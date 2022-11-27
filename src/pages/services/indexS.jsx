@@ -1,0 +1,5 @@
+export { default as Cableado} from './Cableado'
+export { default as UPS} from './UPS'
+export { default as Disenio} from './Disenio'
+export { default as Renovables} from './Renovables'
+export { default as Electrico} from './Electrico'
