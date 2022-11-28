@@ -1,31 +1,46 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  console.log("contact");
+
+  const sendEmail=function(e){
+    e.preventDefault();
+    console.log('enviado');
+    emailjs.sendForm('service_646xlqq','template_u8k3zxi', e.target, 'efrLhO8wR3qhZKff3')
+      .then((result) => {
+          console.log(result.text);
+          window.alert('Tu mensaje se ha enviado con éxito. Pronto te contactaremos, ¡Gracias!')
+          location. reload()
+          window.scrollTo( 0,0 )
+      }, (error) => {
+          console.log(error.text);
+          window.alert('Lo siento, hubo un error al enviar el mensaje, intenta de nuevo. ¡Gracias!')
+      });
+  }
+
   return (
     <div className="form">
-      <Form>
+      <Form onSubmit={sendEmail}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Nombres</Form.Label>
-          <Form.Control type="text" placeholder="Nombres" />
+          <Form.Control type="text" placeholder="Nombres" name="user_name"/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Apellido</Form.Label>
-          <Form.Control type="text" placeholder="Apellido" />
+          <Form.Control type="text" placeholder="Apellido" name="user_last_name"/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Correo electrónico</Form.Label>
-          <Form.Control type="email" placeholder="Ingrese correo" />
+          <Form.Control type="email" placeholder="Ingrese correo" name="user_email"/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Teléfono</Form.Label>
           <Form.Control
             type="number"
-            min="6"
-            max="10"
             placeholder="Ingrese teléfono"
+            name="user_phone"
           />
         </Form.Group>
 
@@ -79,14 +94,14 @@ const Contact = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Mensaje</Form.Label>
           <br />
-          <textarea rows="5" cols="50"></textarea>
+          <textarea rows="5" cols="50" name="user_message"></textarea>
         </Form.Group>
 
         <Button variant="primary" type="submit">
-          Submit
+          Enviar
         </Button>
       </Form>
-      </div>
+    </div>
   );
 };
 
