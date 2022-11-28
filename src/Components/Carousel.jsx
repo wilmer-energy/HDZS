@@ -15,12 +15,13 @@ const Carousel = () => {
         data-bs-ride="carousel"
       >
         <div className="carousel-inner">
-          <div className="carousel-item active" data-bs-interval="10000">
+          <div className="carousel-item active" data-bs-interval="1000">
             {/* <img src="https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="d-block w-100" alt="..." /> */}
             <video
               src={video}
               autoPlay
               muted
+              loop
               className="d-block w-100 videoc"
             ></video>
             <div className="carousel-caption d-block">

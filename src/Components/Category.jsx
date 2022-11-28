@@ -4,8 +4,10 @@ import disenio from '../multimedia/disenio.jpg'
 import generador from '../multimedia/Generador.jpg'
 import mantenimiento from '../multimedia/mantenimiento-electrico-principal.png'
 import img1 from '../multimedia/Renovable.png'
+import { useNavigate } from 'react-router-dom';
 
 const Category = () => {
+    const navigate=useNavigate()
 
 
 
@@ -54,7 +56,8 @@ const Category = () => {
                 <div className='col-12 col-sm-6'>
 
                     <div className='position-relative cur m-2' onClick={() => {
-                        window.scrollTo( 0, 1400 )
+                        navigate('/eRenovables')
+                        window.scrollTo( 0, 0 )
                     }}>
                     <img className='img-fluid  im' src={img1} alt="" />
                     <h2 className='position-absolute top-50 start-50 translate-middle text-light sh'>Energias renovables</h2>
@@ -62,7 +65,8 @@ const Category = () => {
                 </div>
 
                 <div className='position-relative cur m-2' onClick={() => { 
-                    window.scrollTo( 0, 1400 )}}>
+                    navigate('/cableado')
+                    window.scrollTo( 0, 0 )}}>
                     <img className='img-fluid im' src={mantenimiento} alt="" />
                     <h2 className='position-absolute top-50 start-50 translate-middle text-light sh'>Mantenimiento eléctrico</h2>
                 </div>
@@ -70,13 +74,16 @@ const Category = () => {
             </div>
 
             <div className='col-12 col-sm-6'>
-                <div className='position-relative cur m-2' onClick={() => {  
-                    window.scrollTo( 0, 1400 )}}>
+                <div className='position-relative cur m-2' onClick={() => { 
+                    navigate('/mElectrico') 
+                    window.scrollTo( 0, 0 )}}>
                     <img className='img-fluid im' src={cableado} alt="" />
                     <h2 className='position-absolute top-50 start-50 translate-middle text-light sh'>Cableado estructurado</h2>
                 </div>
 
-                <div className='position-relative cur m-2'>
+                <div className='position-relative cur m-2' onClick={() => { 
+                    navigate('/disenio') 
+                    window.scrollTo( 0, 0 )}}>
                     <img className='img-fluid im' src={disenio} alt="" />
                     <h2 className='position-absolute top-50 start-50 translate-middle text-light sh'>Diseño y contrucción</h2>
                 </div>
