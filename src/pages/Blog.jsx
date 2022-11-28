@@ -32,10 +32,10 @@ const Blog = () => {
   ];
 
   return (
-    <>
+    <div className="projectCards">
       {projects.map((e) => {
         return (
-          <Card style={{ width: "30rem" }}>
+          <Card style={{ width: "20rem" }}>
             <Card.Img variant="top" src={e.Img} />
             <Card.Body>
               <Card.Title>{e.Name}</Card.Title>
@@ -49,7 +49,7 @@ const Blog = () => {
           </Card>
         );
       })}
-    </>
+    </div>
   );
 };
 

@@ -16,3 +16,46 @@ border: 1px solid black;
     width: 800px;
     height: 300px !important;
 }
+.projectCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-evenly;
+}
+.projectCard{
+    margin-bottom: 30px;
+}
+.serviceDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.serviceDetails img{
+   width: 100%;
+}
+.servicesImg{
+    width: 45vw;
+}
+.servicesText{
+    width: 45vw;
+}
+@media (max-width: 800px) {
+    .serviceDetails{
+        flex-direction: column;
+    }
+    .servicesImg{
+        width: 90vw;
+    }
+    .servicesText{
+        width: 90vw;
+    }
+}
+.form{
+    width: 50vw;
+    padding-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
