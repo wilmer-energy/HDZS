@@ -12,7 +12,7 @@ import {
   Blog,
   Contact,
   Experience,
-} from "./pages/Index.jsx";
+} from "./pages/In.jsx";
 import {Cableado,Disenio,Renovables,UPS,Electrico} from "./pages/services/indexS";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
