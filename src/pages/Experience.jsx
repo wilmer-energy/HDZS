@@ -4,7 +4,7 @@ import electricalMaintenance from '../multimedia/Servicios/mantenimientoElectric
 import structuredWiring from '../multimedia/Servicios/CableadoEstructurado.jpg';
 import electricalSystems from '../multimedia/Servicios/SistemasElectricos.jpg';
 import powerQuality from '../multimedia/Servicios/CalidadDeEnergia.jpg';
-import ElectricalEquipment from '../multimedia/Servicios/EquiposElectricos.jpg';
+import ElectricalEquipment from '../multimedia/Servicios/EquiposElectricos.png';
 
 const Experience = () => {
   class Project {
