@@ -1,7 +1,4 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* 
 }
 .productCard{
 border: 1px solid black;
@@ -10,52 +7,44 @@ border: 1px solid black;
     width: 100px;
 } */
 #logo_header{
-    width: 150px;
+    width: 100px;
 }
 .img-fluid{
     width: 800px;
     height: 300px !important;
 }
-.projectCards{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: space-evenly;
+
+#Navy{
+    background-color: #14213D !important;  
 }
-.projectCard{
-    margin-bottom: 30px;
+.headerLink{
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #FCA311;
+    background-color: #14213D !important;
+    color:#FFFFFF !important;
 }
-.serviceDetails{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.headerLink:hover{
+    background-color: #FCA311 !important;
 }
-.serviceDetails img{
-   width: 100%;
-}
-.servicesImg{
-    width: 45vw;
-}
-.servicesText{
-    width: 45vw;
-}
-@media (max-width: 800px) {
-    .serviceDetails{
-        flex-direction: column;
-    }
-    .servicesImg{
-        width: 90vw;
-    }
-    .servicesText{
-        width: 90vw;
-    }
-}
+
 .form{
     width: 50vw;
     padding-left: 100px;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+.carouselTitle{
+    background-color: #14213D;
+    color: FFFFFF;
+    width: 450px;
+    height: 50px;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 10px;
+    
+    
+}
+.customerImgs{
+    height: 100px !important;
 }

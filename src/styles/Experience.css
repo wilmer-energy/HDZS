@@ -1,0 +1,48 @@
+.project_card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-evenly;
+}
+
+.service_details_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.service_details_2{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-evenly;
+}
+.service_details_1 img{
+   width: 100%;
+}
+.service_details_2 img{
+    width: 100%;
+ }
+.services_img{
+    width: 45vw;
+}
+.services_text{
+    width: 45vw;
+}
+@media (max-width: 800px) {
+    .service_details_1{
+        flex-direction: column;
+    }
+    .service_details_2{
+        flex-direction: column;
+    }
+    .services_img{
+        width: 90vw;
+    }
+    .services_text{
+        width: 90vw;
+    }
+}

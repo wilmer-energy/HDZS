@@ -4,19 +4,28 @@ import Form from "react-bootstrap/Form";
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const services = [
+    'Energías renovables',
+    'Mantenimiento eléctrico',
+    'Cableado estructurado',
+    'Sistemas eléctricos',
+    'Calidad de energía',
+    'Equipos eléctricos',
+    'Otro'
+  ];
 
-  const sendEmail=function(e){
+  const sendEmail = function (e) {
     e.preventDefault();
     console.log('enviado');
-    emailjs.sendForm('service_646xlqq','template_u8k3zxi', e.target, 'efrLhO8wR3qhZKff3')
+    emailjs.sendForm('service_646xlqq', 'template_u8k3zxi', e.target, 'efrLhO8wR3qhZKff3')
       .then((result) => {
-          console.log(result.text);
-          window.alert('Tu mensaje se ha enviado con éxito. Pronto te contactaremos, ¡Gracias!')
-          location. reload()
-          window.scrollTo( 0,0 )
+        console.log(result.text);
+        window.alert('Tu mensaje se ha enviado con éxito. Pronto te contactaremos, ¡Gracias!')
+        location.reload()
+        window.scrollTo(0, 0)
       }, (error) => {
-          console.log(error.text);
-          window.alert('Lo siento, hubo un error al enviar el mensaje, intenta de nuevo. ¡Gracias!')
+        console.log(error.text);
+        window.alert('Lo siento, hubo un error al enviar el mensaje, intenta de nuevo. ¡Gracias!')
       });
   }
 
@@ -25,15 +34,15 @@ const Contact = () => {
       <Form onSubmit={sendEmail}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Nombres</Form.Label>
-          <Form.Control type="text" placeholder="Nombres" name="user_name"/>
+          <Form.Control type="text" placeholder="Nombres" name="user_name" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Apellido</Form.Label>
-          <Form.Control type="text" placeholder="Apellido" name="user_last_name"/>
+          <Form.Control type="text" placeholder="Apellido" name="user_last_name" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Correo electrónico</Form.Label>
-          <Form.Control type="email" placeholder="Ingrese correo" name="user_email"/>
+          <Form.Control type="email" placeholder="Ingrese correo" name="user_email" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Teléfono</Form.Label>
@@ -85,9 +94,11 @@ const Contact = () => {
         <Form.Group className="mb-3">
           <Form.Label>Servicio</Form.Label>
           <Form.Select>
-            <option>Enería solar</option>
-            <option>Instalaciónes electricas</option>
-            <option>Otro</option>
+            {services.map((e)=>{
+              return (
+                <option>{e}</option>
+              )
+            })}
           </Form.Select>
         </Form.Group>
 

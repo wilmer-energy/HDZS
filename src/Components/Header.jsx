@@ -3,14 +3,14 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import img1 from "../multimedia/disenio.jpg";
+import img1 from "../multimedia/Logo/logo HDZ 2023_page-0001.jpg";
 
 const Header = () => {
 
   return (
     <>
-      <Navbar bg="light" expand="lg" sticky="top">
-        <Container className="flex-row-reverse flex-lg-row">
+      <Navbar bg="light" expand="lg" sticky="top" id="Navy">
+        <Container className="flex-row-reverse flex-lg-row NavBar">
           
           <Navbar.Brand href="/">
             <img id="logo_header" className="img-logo" src={img1} alt="" />
@@ -22,56 +22,32 @@ const Header = () => {
           >
             <Nav className="gap-2 m-auto">
               <Nav.Link
-                href="#/about"
-                className="fw-semibold text-center"
+                href="#/about" onClick={window.scrollTo(0,0)}
+                className="fw-semibold text-center headerLink"
                 
               >
                 Acerca de
               </Nav.Link>
               <Nav.Link
-                href="#/experience"
-                className="fw-semibold text-center"
+                href="#/experience" onClick={window.scrollTo(0,0)}
+                className="fw-semibold text-center headerLink"
                 
               >
                 Proyectos
               </Nav.Link>
+  
               <Nav.Link
-                href="#/blog"
-                className="fw-semibold text-center"
-                
-              >
-                Blogs
-              </Nav.Link>
-              <Nav.Link
-                href="#/contact"
-                className="fw-semibold text-center"
+                href="#/contact" onClick={window.scrollTo(0,0)}
+                className="fw-semibold text-center headerLink"
               >
                 Contactanos
               </Nav.Link>
-              <NavDropdown
-                title="Servicios"
-                className="fw-semibold text-center"
+              <Nav.Link
+                href="#/services" onClick={window.scrollTo(0,0)}
+                className="fw-semibold text-center headerLink"
               >
-                <NavDropdown.Item href="#/eRenovables">
-                  Energias renovables
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#/mElectrico">
-                  Mantenimiento eléctrico
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#/cableado">
-                  Cableado estructurado
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#/disenio">
-                  Diseño y contrucción
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#/UPS">
-                  UPS y generadores
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#/services">
-                  Todos los servicios
-                </NavDropdown.Item>
-              </NavDropdown>
+                Servicios
+              </Nav.Link>
             </Nav>
            
           </Navbar.Collapse>

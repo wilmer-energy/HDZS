@@ -1,0 +1,28 @@
+.serviceCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.serviceCard{
+    background-color: #14213D !important;
+    color: #FFFF !important;
+    height: 350px !important;
+}
+.serviceCard:hover{
+    transform: scale(1.2);
+}
+.serviceCardTitle{
+    background-color: #FCA311;
+    border-radius: 5px;
+    color: #FFFF;
+    text-align: center;
+}
+#serviceCardImg{
+    height: 200px;
+    width: 100%;
+}

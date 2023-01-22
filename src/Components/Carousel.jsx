@@ -6,7 +6,35 @@ import disenio from '../multimedia/disenio.jpg'
 import generador from '../multimedia/Generador.jpg'
 import mantenimiento from '../multimedia/mantenimiento-electrico-principal.png'
 
+import renewableEnergy from '../multimedia/Servicios/EnergiasRenovables.png';
+import electricalMaintenance from '../multimedia/Servicios/mantenimientoElectrico.jpg';
+import structuredWiring from '../multimedia/Servicios/CableadoEstructurado.jpg';
+import electricalSystems from '../multimedia/Servicios/SistemasElectricos.jpg';
+import powerQuality from '../multimedia/Servicios/CalidadDeEnergia.jpg';
+import ElectricalEquipment from '../multimedia/Servicios/EquiposElectricos.jpg';
+
 const Carousel = () => {
+  class Services {
+    constructor(img, title) {
+      this.img = img;
+      this.title = title;
+    }
+  }
+  const titles = [
+    'Energías renovables',
+    'Mantenimiento eléctrico',
+    'Cableado estructurado',
+    'Sistemas eléctricos',
+    'Calidad de energía',
+    'Equipos eléctricos'
+  ];
+  const service = [
+    new Services(electricalMaintenance, titles[1]),
+    new Services(structuredWiring, titles[2]),
+    new Services(electricalSystems, titles[3]),
+    new Services(powerQuality, titles[4]),
+    new Services(ElectricalEquipment, titles[5])
+  ];
   return (
     <>
       <div
@@ -24,65 +52,32 @@ const Carousel = () => {
               loop
               className="d-block w-100 videoc"
             ></video>
-            <div className="carousel-caption d-block">
-              <h2>Energias renovables</h2>
-              <a href="" className="btn btn-dark ps-4 pe-4">
+            <div className="carousel-caption d-block carouselText">
+              
+              <a href="#/services" className="btn btn-dark ps-4 pe-4 headerLink">
                 Conoce más
               </a>
             </div>
           </div>
-          <div className="carousel-item" data-bs-interval="2000">
-            <img
-              src={mantenimiento}
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="carousel-caption d-block">
-              <h2>Mantenimiento eléctrico</h2>
-              <a href="" className="btn btn-dark ps-4 pe-4">
-                Conoce más
-              </a>
-            </div>
-          </div>
-          <div className="carousel-item" data-bs-interval="2000">
-            <img
-              src={cableado}
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="carousel-caption d-block">
-              <h2>Cableado estructurado</h2>
-              <a href="" className="btn btn-dark ps-4 pe-4">
-              Conoce más
-              </a>
-            </div>
-          </div>
-          <div className="carousel-item" data-bs-interval="2000">
-            <img
-              src={disenio}
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="carousel-caption d-block">
-              <h2>Diseño y contrucción</h2>
-              <a href="" className="btn btn-dark ps-4 pe-4">
-              Conoce más
-              </a>
-            </div>
-          </div>
-          <div className="carousel-item" data-bs-interval="2000">
-            <img
-              src={generador}
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="carousel-caption d-block">
-              <h2>UPS y generadores</h2>
-              <a href="" className="btn btn-dark ps-4 pe-4">
-              Conoce más
-              </a>
-            </div>
-          </div>
+          
+          {service.map((e) => {
+            return (
+              <div className="carousel-item" data-bs-interval="2000">
+                <img
+                  src={e.img}
+                  className="d-block w-100"
+                  alt="..."
+                />
+                <div className="carousel-caption d-block carouselText">
+                  
+                  <a href="#/services" className="btn btn-dark ps-4 pe-4 headerLink">
+                  {e.title}
+                  </a>
+                </div>
+              </div>
+            )
+          })}
+
         </div>
         <button
           className="carousel-control-prev"
@@ -112,5 +107,18 @@ const Carousel = () => {
     </>
   );
 };
+/*<div className="carousel-item" data-bs-interval="2000">
+            <img
+              src={powerQuality}
+              className="d-block w-100"
+              alt="..."
+            />
+            <div className="carousel-caption d-block">
+              <h2>{titles[4]}</h2>
+              <a href="" className="btn btn-dark ps-4 pe-4">
+                Conoce más
+              </a>
+            </div>
+          </div> */
 
 export default Carousel;
