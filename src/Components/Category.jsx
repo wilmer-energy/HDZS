@@ -4,7 +4,7 @@ import electricalMaintenance from '../multimedia/Servicios/mantenimientoElectric
 import structuredWiring from '../multimedia/Servicios/CableadoEstructurado.jpg';
 import electricalSystems from '../multimedia/Servicios/SistemasElectricos.jpg';
 import powerQuality from '../multimedia/Servicios/CalidadDeEnergia.jpg';
-import ElectricalEquipment from '../multimedia/Servicios/EquiposElectricos.jpg';
+import ElectricalEquipment from '../multimedia/Servicios/EquiposElectricos.png';
 
 import customer1 from '../multimedia/Clientes/image_2.jpg';
 import customer2 from '../multimedia/Clientes/image_3.jpg';
