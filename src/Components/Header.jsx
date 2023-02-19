@@ -26,7 +26,13 @@ const Header = () => {
                 className="fw-semibold text-center headerLink"
                 
               >
-                Acerca de
+                Nosotros
+              </Nav.Link>
+              <Nav.Link
+                href="#/services" onClick={window.scrollTo(0,0)}
+                className="fw-semibold text-center headerLink"
+              >
+                Servicios
               </Nav.Link>
               <Nav.Link
                 href="#/experience" onClick={window.scrollTo(0,0)}
@@ -35,18 +41,11 @@ const Header = () => {
               >
                 Proyectos
               </Nav.Link>
-  
               <Nav.Link
                 href="#/contact" onClick={window.scrollTo(0,0)}
                 className="fw-semibold text-center headerLink"
               >
-                Contactanos
-              </Nav.Link>
-              <Nav.Link
-                href="#/services" onClick={window.scrollTo(0,0)}
-                className="fw-semibold text-center headerLink"
-              >
-                Servicios
+                Contáctanos
               </Nav.Link>
             </Nav>
            

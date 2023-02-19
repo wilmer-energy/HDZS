@@ -18,43 +18,37 @@ import { useNavigate } from 'react-router-dom';
 
 const Category = () => {
     class Project {
-        constructor(img, title, url, id) {
+        constructor(img, title) {
             this.img = img;
             this.title = title;
-            this.url = url;
-            this.id = id;
         }
     }
-    const url = [
-        'Desarrollo soluciones energéticas a partir de fuentes no convencionales que brindan autonomía y contribuyen al cuidado del medio ambiente',
-        'Ejecución de labores de mantenimiento preventivo y correctivo para sistemas eléctricos y fotovoltaicos',
-        'Diseño y ejecución de obras de cableado estructurado, CCTV y seguridad y control',
-        'Diseño y construcción de sistemas eléctricos de baja y media tensión y sistemas de apantallamiento para el sector industrial y comercial',
-        'Análisis de la calidad de energía e implementación de sistemas de compensación de reactivas',
-        'Suministro, instalación y mantenimiento de UPS y generadores eléctricos'
-    ];
     const titles = [
-        'Energías renovables',
-        'Mantenimiento eléctrico',
-        'Cableado estructurado',
-        'Sistemas eléctricos',
-        'Calidad de energía',
-        'Equipos eléctricos'
-    ];
+        'Unidad de Restitución de Tierras',
+        'Mantenimiento Electrico Edificio North Point 155',
+        'Unidad de Búsqueda Personas Desaparecidas',
+        'Adecuación de Puntos Electricos y Datos SGS Colombia',
+        'Adecuaciones Sistema de Apuntalamiento Torre ATC',
+        'Diseño Electrico Termozipa'
+      ];
     const customerImg = [customer1, customer2, customer3, customer4, customer5, customer6, customer7]
     const projects = [
-        new Project(renewableEnergy, titles[0], url[0], 1),
-        new Project(electricalMaintenance, titles[1], url[1], 2),
-        new Project(structuredWiring, titles[2], url[2], 3),
-        new Project(electricalSystems, titles[3], url[3], 4),
-        new Project(powerQuality, titles[4], url[4], 5),
-        new Project(ElectricalEquipment, titles[5], url[5], 6)
+        new Project(renewableEnergy, titles[0]),
+        new Project(electricalMaintenance, titles[1]),
+        new Project(structuredWiring, titles[2]),
+        new Project(electricalSystems, titles[3]),
+        new Project(powerQuality, titles[4]),
+        new Project(ElectricalEquipment, titles[5])
     ];
     const navigate = useNavigate()
     return (
-        <div className='container mt-3 '>
-            <div className='row mb-3'>
-                <h1>Empresas que han confiado en nosotros</h1>
+        <div className='container mt-3' >
+            <div className='row mb-3 inicio' style={{marginTop: "80px"}}>
+                <h2> <strong>¿QUIÉNES SOMOS?</strong></h2>
+                <p>Somos una empresa Colombiana establecida en 2015 con amplia experiencia en infraestructura eléctrica , cableado estructurado y mantenimiento preventivo y correctivo en sectores industriales, comerciales y residencial. También hemos realizado proyectos de energía solar que mejoren las condiciones de ZNI y ayuden a un futuro más sostenible y amigable con el medio ambiente</p>
+            </div>
+            <div className='row mb-3'style={{marginTop: "80px"}}>
+                <h2> <strong>EMPRESAS QUE HAN CONFIADO EN NOSOTROS</strong> </h2>
                 {customerImg.map((e) => {
                     return (<>
                         <div className='col-6 col-lg-3'>
@@ -66,10 +60,9 @@ const Category = () => {
 
             </div>
 
-            <h1>Mas de 7 años de experiencia en el mercado</h1>
-            <p>Proyectos</p>
-
-            <div className='row'>
+            <div className='row' style={{marginBottom: "50px",marginTop: "100px"}}>
+            <h2> <strong>MAS DE 7 AÑOS DE EXPERIENCIA</strong></h2>
+            <h5>Proyectos realizados</h5>
                 {projects.map((e) => {
                     return (
                         <>
@@ -79,7 +72,7 @@ const Category = () => {
                                     window.scrollTo(0, 0)
                                 }}>
                                     <img className='img-fluid  im' src={e.img} alt="" />
-                                    <h2 className='position-absolute top-50 start-50 translate-middle text-light sh'>{e.title}</h2>
+                                    <h3 className='position-absolute top-50 start-50 translate-middle text-light sh'>{e.title}</h3>
 
                                 </div>
                             </div>

@@ -9,7 +9,7 @@ const Footer = () => {
           style={{ backgroundColor: "#1c2331" }}
         >
           <section className="d-flex justify-content-between p-4 footer-section">
-    
+
           </section>
 
           <section className="">
@@ -18,10 +18,12 @@ const Footer = () => {
                 <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold">HDZ INGENIERÍA Y SOLUCIONES</h6>
                   <hr className="mb-4 mt-0 d-inline-block mx-auto" />
+                  <div style={{ textAlign: "center" }}>
+                    <i class="fa-solid fa-leaf"></i>
+                  </div>
                   <p>
-                    Chomerce Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit.
-                  </p>
+                      El pasado no se puede cambiar, pero el futuro sostenible está en tus manos
+                    </p>
                 </div>
 
                 <div className="col-md-3 col-lg-2 col-xl-4 mx-auto mb-md-0 mb-4">
@@ -45,7 +47,7 @@ const Footer = () => {
             className="text-center p-3"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
           >
-            ¡Gracias por tu visita!.
+
           </div>
         </footer>
       </div>

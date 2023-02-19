@@ -55,7 +55,7 @@ const Carousel = () => {
             <div className="carousel-caption d-block carouselText">
               
               <a href="#/services" className="btn btn-dark ps-4 pe-4 headerLink">
-                Conoce más
+              Energías renovables
               </a>
             </div>
           </div>
@@ -107,18 +107,5 @@ const Carousel = () => {
     </>
   );
 };
-/*<div className="carousel-item" data-bs-interval="2000">
-            <img
-              src={powerQuality}
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="carousel-caption d-block">
-              <h2>{titles[4]}</h2>
-              <a href="" className="btn btn-dark ps-4 pe-4">
-                Conoce más
-              </a>
-            </div>
-          </div> */
 
 export default Carousel;
